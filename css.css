@@ -1,0 +1,67 @@
+
+.split-menu-button .label {
+    -fx-background-color: rgb(21,30,130);
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+}
+
+.split-menu-button .arrow {
+    -fx-background-color:  white;
+}
+.split-menu-button .arrow-button {
+    -fx-background-color: rgb(21,30,130) ;
+}
+.split-menu-button .menu-item {
+    -fx-font-size: 18px;
+    -fx-background-color: rgb(21,30,130);
+    -fx-cursor: hand;
+}
+.split-menu-button .menu {
+    -fx-background-color: rgb(21,30,130);
+}
+
+.button {
+    -fx-background-color: transparent;
+}
+.button:hover{
+    -fx-background-color: rgb(21, 30, 90);
+}
+.split-menu-button {
+    -fx-background-color: transparent;
+    -fx-border: none;
+}
+.split-menu-button:hover{
+    -fx-background-color: rgb(21, 30, 90);
+
+}
+
+.split-menu-button:hover .label{
+    -fx-background-color: rgb(21, 30, 90);
+
+}
+
+.split-menu-button:hover .arrow-button{
+    -fx-background-color: rgb(21, 30, 90);
+
+}
+.split-menu-button .menu-item{
+    -fx-background-color: rgb(21, 30, 130);
+
+}
+.split-menu-button .menu-item .label{
+    -fx-background-color: rgb(21, 30, 130);
+
+}
+.split-menu-button .menu-item:hover .label{
+    -fx-background-color: rgb(21, 30, 90);
+    -fx-text-fill: white;
+}
+.split-menu-button .menu-item:hover{
+    -fx-background-color: rgb(21, 30, 90);
+    -fx-text-fill: white;
+}
+.password-field {
+    -fx-prompt-text-fill: black;
+}
+
+

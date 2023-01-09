@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studomat.UserStudentInformationScreenController">
+    <fx:include prefHeight="650.0" prefWidth="600.0" source="userMenuBar.fxml" />
+    <GridPane layoutX="286.0" prefHeight="600.0" prefWidth="620.0" style="-fx-background-color: rgb(21,30,90);" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="186.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="319.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <Label text="Informacije" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="24.0" />
+                </font>
+            </Label>
+            <Label text="Ime studenta:" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets right="20.0" />
+                </GridPane.margin>
+            </Label>
+            <Label text="Prezime studenta:" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                <GridPane.margin>
+                    <Insets right="20.0" />
+                </GridPane.margin>
+            </Label>
+            <Label text="Datum rođenja studenta:" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                <GridPane.margin>
+                    <Insets right="20.0" />
+                </GridPane.margin>
+            </Label>
+            <TableView fx:id="subjectTableView" prefHeight="266.0" prefWidth="295.0" style="-fx-background-color: lightblue;" GridPane.rowIndex="5">
+                <columns>
+                    <TableColumn fx:id="idTableColumn" prefWidth="51.0" text="ID" />
+                    <TableColumn fx:id="nameTableColumn" prefWidth="123.0" text="Ime predmeta" />
+                    <TableColumn fx:id="numberOfECTSTableColumn" prefWidth="55.0" text="ECTS" />
+                    <TableColumn fx:id="numberOfSemesterTableColumn" prefWidth="70.0" text="Semestar" />
+                </columns>
+                <GridPane.margin>
+                    <Insets bottom="10.0" left="10.0" right="5.0" />
+                </GridPane.margin>
+            </TableView>
+            <Label text="Upisani predmeti" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                <font>
+                    <Font name="System Italic" size="18.0" />
+                </font>
+            </Label>
+            <Label fx:id="nameOfStudentLabel" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets left="15.0" />
+                </GridPane.margin>
+            </Label>
+            <Label fx:id="lastNameOfStudentLabel" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <GridPane.margin>
+                    <Insets left="15.0" />
+                </GridPane.margin>
+            </Label>
+            <Label fx:id="dateOfBirthOfStudentLabel" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <GridPane.margin>
+                    <Insets left="15.0" />
+                </GridPane.margin>
+            </Label>
+            <Label text="Prijavljeni ispiti" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                <font>
+                    <Font name="System Italic" size="18.0" />
+                </font>
+            </Label>
+            <TableView fx:id="examTableView" prefHeight="300.0" prefWidth="305.0" style="-fx-background-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                <columns>
+                    <TableColumn fx:id="idExamTableColumn" prefWidth="49.0" text="ID" />
+                    <TableColumn fx:id="nameExamTableColumn" prefWidth="146.0" text="Ime predmeta" />
+                    <TableColumn fx:id="dateExamTableColumn" prefWidth="109.0" text="Datum" />
+                </columns>
+                <GridPane.margin>
+                    <Insets bottom="10.0" left="5.0" right="10.0" />
+                </GridPane.margin>
+            </TableView>
+        </children>
+    </GridPane>
+</AnchorPane>

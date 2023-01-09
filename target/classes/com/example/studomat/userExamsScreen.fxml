@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="400.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studomat.UserExamsScreenController">
+    <fx:include prefHeight="600.0" prefWidth="600.0" source="userMenuBar.fxml" />
+    <GridPane layoutX="280.0" prefHeight="600.0" prefWidth="620.0" style="-fx-background-color: rgb(21,30,90);">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="345.0" minWidth="10.0" prefWidth="301.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0" minWidth="10.0" prefWidth="299.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="415.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="415.0" minHeight="10.0" prefHeight="297.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="305.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <Label text="Prijava ispita" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="24.0" />
+                </font>
+            </Label>
+            <Label fx:id="unos" maxWidth="302.0" text="Izaberite jedan od ponuđenih upisanih predmeta:" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets left="20.0" />
+                </GridPane.margin>
+            </Label>
+            <ChoiceBox fx:id="subjectNameChoiceBox" maxWidth="170.0" prefWidth="170.0" style="-fx-background-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+            </ChoiceBox>
+            <Button mnemonicParsing="false" onAction="#onRegisterExamButtonClick" style="-fx-background-color: lightblue; -fx-text-fill: rgb(21,30,130);" text="Prijavi ispit!" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            </Button>
+         <TableView fx:id="examTableView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightblue;" GridPane.columnSpan="2" GridPane.rowIndex="2">
+           <columns>
+             <TableColumn fx:id="idTableColumn" prefWidth="85.0" text="ID" />
+             <TableColumn fx:id="subjectTableColumn" prefWidth="303.0" text="Predmet" />
+               <TableColumn fx:id="dateTableColumn" prefWidth="211.0" text="Datum" />
+           </columns>
+            <GridPane.margin>
+               <Insets left="10.0" right="10.0" />
+            </GridPane.margin>
+         </TableView>
+         <Button mnemonicParsing="false" onAction="#onRefreshButtonClick" prefWidth="80.0" style="-fx-background-color: lightblue; -fx-text-fill: rgb(21,30,130);" text="Osvježi" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets right="30.0" />
+            </GridPane.margin>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+        </children>
+    </GridPane>
+</AnchorPane>

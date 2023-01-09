@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studomat.AdminUpdateStudentScreenController">
+    <fx:include prefHeight="650.0" prefWidth="600.0" source="adminMenuBar.fxml" />
+    <GridPane layoutX="286.0" prefHeight="600.0" prefWidth="620.0" style="-fx-background-color: rgb(21,30,90);" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="313.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="307.0" minWidth="10.0" prefWidth="307.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="186.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="240.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <Label text="Promijeni podatke o studentu" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="24.0" />
+                </font>
+            </Label>
+            <Label text="Ime studenta:" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets right="20.0" />
+                </GridPane.margin>
+            </Label>
+            <Label text="Prezime studenta:" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                <GridPane.margin>
+                    <Insets right="20.0" />
+                </GridPane.margin>
+            </Label>
+            <Label text="Datum rođenja studenta:" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                <GridPane.margin>
+                    <Insets right="20.0" />
+                </GridPane.margin>
+            </Label>
+            <TableView fx:id="subjectTableView" prefHeight="266.0" prefWidth="295.0" style="-fx-background-color: lightblue;" GridPane.rowIndex="7">
+                <columns>
+                    <TableColumn fx:id="idTableColumn" prefWidth="51.0" text="ID" />
+                    <TableColumn fx:id="nameTableColumn" prefWidth="123.0" text="Ime predmeta" />
+                    <TableColumn fx:id="numberOfECTSTableColumn" prefWidth="55.0" text="ECTS" />
+                    <TableColumn fx:id="numberOfSemesterTableColumn" prefWidth="70.0" text="Semestar" />
+                </columns>
+                <GridPane.margin>
+                    <Insets bottom="10.0" left="10.0" right="5.0" />
+                </GridPane.margin>
+            </TableView>
+            <Label text="Upisani predmeti" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                <font>
+                    <Font name="System Italic" size="18.0" />
+                </font>
+            <GridPane.margin>
+               <Insets top="40.0" />
+            </GridPane.margin>
+            </Label>
+            <Label text="Prijavljeni ispiti" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                <font>
+                    <Font name="System Italic" size="18.0" />
+                </font>
+            <GridPane.margin>
+               <Insets top="40.0" />
+            </GridPane.margin>
+            </Label>
+            <TableView fx:id="examTableView" prefHeight="300.0" prefWidth="305.0" style="-fx-background-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                <columns>
+                    <TableColumn fx:id="idExamTableColumn" prefWidth="49.0" text="ID" />
+                    <TableColumn fx:id="nameExamTableColumn" prefWidth="146.0" text="Ime predmeta" />
+                    <TableColumn fx:id="dateExamTableColumn" prefWidth="109.0" text="Datum" />
+                </columns>
+                <GridPane.margin>
+                    <Insets bottom="10.0" left="5.0" right="10.0" />
+                </GridPane.margin>
+            </TableView>
+            <Label text="Korisničko ime studenta:" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                <GridPane.margin>
+                    <Insets right="20.0" />
+                </GridPane.margin>
+            </Label>
+            <Label text="Zaporka studenta:" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                <GridPane.margin>
+                    <Insets right="20.0" />
+                </GridPane.margin>
+            </Label>
+         <TextField fx:id="nameTextField" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets left="10.0" right="70.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="lastNameTextField" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets left="10.0" right="70.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="usernameTextField" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <GridPane.margin>
+               <Insets left="10.0" right="70.0" />
+            </GridPane.margin>
+         </TextField>
+         <PasswordField fx:id="passwordPasswordField" prefWidth="208.0" stylesheets="@../../../../../css.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <GridPane.margin>
+               <Insets left="10.0" right="70.0" />
+            </GridPane.margin>
+         </PasswordField>
+         <DatePicker fx:id="dateOfBirthDatePicker" editable="false" prefHeight="25.0" prefWidth="227.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </DatePicker>
+         <Button mnemonicParsing="false" onAction="#unregisterSubjectFromStudent" style="-fx-background-color: lightblue; -fx-text-fill: rgb(21,30,130);" text="Ispiši studenta s predmeta" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <GridPane.margin>
+               <Insets bottom="10.0" />
+            </GridPane.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#unregisterExamFromStudent" style="-fx-background-color: lightblue; -fx-text-fill: rgb(21,30,130);" text="Odjavi studenta s ispita" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <GridPane.margin>
+               <Insets bottom="10.0" />
+            </GridPane.margin>
+         </Button>
+         <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" onMousePressed="#showPassword" onMouseReleased="#hidePassword" stroke="WHITE" strokeType="INSIDE" width="25.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+            <GridPane.margin>
+               <Insets right="40.0" />
+            </GridPane.margin>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Rectangle>
+         <Circle fx:id="avatar" fill="#1f93ff" onMouseClicked="#chooseFile" radius="50.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: image;" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets left="30.0" />
+            </GridPane.margin>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Circle>
+         <Button mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="34.0" prefWidth="161.0" style="-fx-background-color: lightblue; -fx-text-fill: rgb(21,30,130);" text="Spremi promjene" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <GridPane.margin>
+               <Insets bottom="30.0" />
+            </GridPane.margin>
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+        </children>
+    </GridPane>
+</AnchorPane>

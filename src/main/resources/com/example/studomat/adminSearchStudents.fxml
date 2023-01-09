@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studomat.AdminShowAllStudentsController">
+    <fx:include prefWidth="600.0" source="adminMenuBar.fxml" />
+    <GridPane layoutX="290.0" prefHeight="600.0" prefWidth="620.0" style="-fx-background-color: rgb(21,30,90);">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="373.0" minWidth="10.0" prefWidth="318.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="302.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="244.0" minHeight="0.0" prefHeight="85.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="510.0" minHeight="10.0" prefHeight="447.0" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="510.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <Label text="Pretraga studenata" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="24.0" />
+                </font>
+            </Label>
+            <TableView fx:id="userTableView" prefHeight="400.0" prefWidth="620.0" style="-fx-background-color: lightblue;" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                <columns>
+                    <TableColumn fx:id="idTableColumn" prefWidth="47.0" text="Id" />
+                    <TableColumn fx:id="nameTableColumn" prefWidth="131.0" text="Ime" />
+               <TableColumn fx:id="lastNameTableColumn" prefWidth="142.0" text="Prezime" />
+               <TableColumn fx:id="dateOfBirthTableColumn" prefWidth="122.0" text="Datum rođenja" />
+               <TableColumn fx:id="subjectsTableColumn" prefWidth="177.0" text="Upisani predmeti po ID-u" />
+                </columns>
+            </TableView>
+         <Button mnemonicParsing="false" onAction="#onDeleteStudentButtonClick" style="-fx-background-color: red; -fx-text-fill: rgb(21,30,130);" text="Izbriši studenta" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <GridPane.margin>
+               <Insets left="250.0" />
+            </GridPane.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#checkSelectedUser" style="-fx-background-color: lightblue; -fx-text-fill: rgb(21,30,130);" text="Promijeni podatke studenta" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <GridPane.margin>
+               <Insets right="250.0" />
+            </GridPane.margin>
+         </Button>
+        </children>
+    </GridPane>
+</AnchorPane>
