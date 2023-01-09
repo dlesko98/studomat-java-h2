@@ -11,7 +11,6 @@ these exams and courses.
 Below are some pictures:
 
 Login page
-
 ![alt text](https://github.com/dlesko98/studomat-java-h2/blob/main/img/Studomat-1.png?raw=true)
 
 Register page
