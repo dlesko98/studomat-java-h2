@@ -9,3 +9,4 @@ other users of the application. Users (students) on the other hand can register 
 these exams and courses.
 
 
+![alt text](https://github.com/dlesko98/studomat-java-h2/blob/main/Studomat-1.png?raw=true)
