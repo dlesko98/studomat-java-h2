@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studomat.RegisterScreenController">
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.studomat.RegisterScreenController">
    <children>
       <GridPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: rgb(21,30,130);">
         <columnConstraints>
@@ -104,7 +104,7 @@
                   <Font size="14.0" />
                </font>
             </Hyperlink>
-            <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="#b0d5e6" height="25.0" onMousePressed="#showPassword" onMouseReleased="#hidePassword" stroke="WHITE" strokeType="INSIDE" width="25.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+            <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" onMousePressed="#showPassword" onMouseReleased="#hidePassword" stroke="WHITE" strokeType="INSIDE" width="25.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

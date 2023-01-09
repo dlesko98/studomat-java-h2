@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="400.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studomat.UserUndoExamsScreenController">
+<AnchorPane maxHeight="400.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.studomat.UserUndoExamsScreenController">
     <fx:include prefHeight="600.0" prefWidth="600.0" source="userMenuBar.fxml" />
     <GridPane layoutX="288.0" prefHeight="600.0" prefWidth="620.0" style="-fx-background-color: rgb(21,30,90);">
         <columnConstraints>

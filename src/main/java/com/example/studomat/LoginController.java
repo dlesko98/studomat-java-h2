@@ -40,6 +40,10 @@ public class LoginController {
         rectangle.setFill(new ImagePattern(eyeImg));
     }
     @FXML
+    public void onEnter () throws SQLException, IOException {
+        onLoginButtonClick();
+    }
+    @FXML
     protected void onLoginButtonClick () throws SQLException, IOException {
         int usernameError = 0;
         int passwordError = 0;

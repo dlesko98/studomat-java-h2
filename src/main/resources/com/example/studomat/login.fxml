@@ -58,12 +58,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <TextField fx:id="userNameTextField" prefHeight="35.0" style="-fx-background-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="userNameTextField" onAction="#onEnter" prefHeight="35.0" style="-fx-background-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets right="60.0" />
                </GridPane.margin>
             </TextField>
-            <PasswordField fx:id="passwordField" prefHeight="35.0" style="-fx-background-color: lightblue;" stylesheets="@../../../../../css.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <PasswordField fx:id="passwordField" onAction="#onEnter" prefHeight="35.0" style="-fx-background-color: lightblue;" stylesheets="@../../../../../css.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets right="60.0" />
                </GridPane.margin>
