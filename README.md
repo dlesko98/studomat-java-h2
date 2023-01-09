@@ -8,3 +8,4 @@ Admin has additional options, such as adding exams and courses, modifying them, 
 other users of the application. Users (students) on the other hand can register and unregister 
 these exams and courses.
 
+

@@ -50,7 +50,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#onLoginButtonClick" onKeyPressed="#onLoginButtonClick" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: lightblue; -fx-text-fill: rgb(21,30,130);" text="Prijava" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <Button mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: lightblue; -fx-text-fill: rgb(21,30,130);" text="Prijava" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                <font>
                   <Font size="36.0" />
                </font>
