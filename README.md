@@ -7,7 +7,7 @@ courses and exams. There are 2 levels of authentication: admin and user (user le
 Admin has additional options, such as adding exams and courses, modifying them, as well as managing
 other users of the application. Users (students) on the other hand can register and unregister 
 these exams and courses.
-
+##
 Below are some pictures:
 
 Login page
