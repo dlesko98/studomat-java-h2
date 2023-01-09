@@ -39,7 +39,7 @@ public class RegisterScreenController {
 
     @FXML
     public void initialize() throws FileNotFoundException {
-        InputStream eyeIs = new BufferedInputStream(new FileInputStream("src/main/resources/com/example/prvisamostalniprojekt/images/eye.png"));
+        InputStream eyeIs = new BufferedInputStream(new FileInputStream("src/main/resources/com/example/studomat/images/eye.png"));
         Image eyeImg = new Image(eyeIs);
         rectangle.setFill(new ImagePattern(eyeImg));
     }
